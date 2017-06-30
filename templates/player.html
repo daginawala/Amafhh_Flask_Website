@@ -1,0 +1,97 @@
+{% extends "main.html" %}
+
+{% block dash %}
+
+    <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="batting">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                    <td colspan="13"> <h4> Bowling Statistics </h4></td>
+                </tr>
+
+                <tr>
+                 <th>Player Name</th>
+                  <th>Matches</th>
+                    <th>Overs</th>
+                  <th>Runs</th>
+                  <th>Maidens</th>
+                  <th>Wickets</th>
+                  <th>Best</th>
+                  <th>5w</th>
+                  <th>3w</th>
+                 <th>Wides</th>
+                 <th>No Balls</th>
+                 <th>Economy</th>
+                 <th>Average</th>
+                </tr>
+
+
+            {%for player_name, matches, overs, runs, maidens, wickets, best, five_wicket, three_wicket,  wides, no_balls, economy, avg in bowl_stats%}
+              <tr>
+                  <td> {{player_name}} </td>
+                  <td> {{matches}} </td>
+                  <td> {{overs}} </td>
+                  <td> {{runs}} </td>
+                  <td> {{maidens}} </td>
+                  <td> {{wickets}}</td>
+                  <td> {{best}} </td>
+                  <td> {{five_wicket}} </td>
+                  <td> {{three_wicket}} </td>
+                  <td> {{wides}}</td>
+                  <td> {{no_balls}}</td>
+                  <td> {{economy}}</td>
+                  <td> {{avg}} </td>
+              </tr>
+              {% endfor %}
+
+              </thead>
+            </table>
+          </div>
+    </div>
+
+
+    <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="batting">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                    <td colspan="11"> <h4> Batting Statistics </h4></td>
+                </tr>
+                <tr>
+                 <th>Player Name</th>
+                  <th>Runs</th>
+                    <th>Balls Played</th>
+                  <th>Matches</th>
+                  <th>Innings</th>
+                  <th>Highest Score</th>
+                 <th>100</th>
+                 <th>50</th>
+                 <th>30</th>
+                 <th>Ducks</th>
+                 <th>Average</th>
+                </tr>
+
+
+            {%for player_name, total_runs, Balls, total_matches, total_innings, hs, hundreds, fifties, thirties, ducks, avg in bat_stats%}
+              <tr>
+                  <td> {{player_name}} </td>
+                  <td> {{total_runs}} </td>
+                  <td> {{Balls}} </td>
+                  <td> {{total_matches}} </td>
+                  <td> {{total_innings}} </td>
+                  <td> {{hs}} </td>
+                  <td> {{hundreds}}</td>
+                  <td> {{fifties}}</td>
+                  <td> {{thirties}}</td>
+                  <td> {{ducks}} </td>
+                  <td> {{avg}} </td>
+              </tr>
+              {% endfor %}
+
+
+              </thead>
+            </table>
+          </div>
+    </div>
+{% endblock %}

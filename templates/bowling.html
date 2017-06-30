@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+
+{% block dash %}
+
+    <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="batting">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                 <th>Player Name</th>
+                  <th>Matches</th>
+                    <th>Overs</th>
+                  <th>Runs</th>
+                  <th>Maidens</th>
+                  <th>Wickets</th>
+                  <th>Best</th>
+                  <th>5w</th>
+                  <th>3w</th>
+                 <th>Wides</th>
+                 <th>No Balls</th>
+                 <th>Economy</th>
+                 <th>Average</th>
+                </tr>
+            {%for player_name, matches, overs, runs, maidens, wickets, best, five_wicket, three_wicket,  wides, no_balls, economy, avg in player_stats%}
+              <tr>
+                  <td> {{player_name}} </td>
+                  <td> {{matches}} </td>
+                  <td> {{overs}} </td>
+                  <td> {{runs}} </td>
+                  <td> {{maidens}} </td>
+                  <td> {{wickets}}</td>
+                  <td> {{best}} </td>
+                  <td> {{five_wicket}} </td>
+                  <td> {{three_wicket}} </td>
+                  <td> {{wides}}</td>
+                  <td> {{no_balls}}</td>
+                  <td> {{economy}}</td>
+                  <td> {{avg}} </td>
+              </tr>
+              {% endfor %}
+              </thead>
+            </table>
+          </div>
+
+
+    </div>
+
+{% endblock %}

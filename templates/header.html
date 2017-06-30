@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Python Programming Tutorials</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+
+<header style="height:50px">
+      <!--<a class="navbar-brand" href="/">-->
+	  <!--<img style="max-width:80px; margin-top: -7px;" src="{{ url_for('static', filename='images/amafhh_logo.jpg') }}">-->
+	  <!--</a>-->
+
+
+	<div class = "container-fluid">
+
+	<ul class="nav navbar-nav navbar-right">
+
+		  <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
+			<h5>
+
+			<a role="presentation" data-toggle="modal" data-target="#exampleModal" href="#"><span class="glyphicon glyphicon-log-in"></span> Login   </a>
+			<a role="presentation" data-toggle="modal" data-target="#exampleModal" href="#"><span class="glyphicon glyphicon-log-in"></span> sign up   </a>
+			</h5>
+		  </div>
+
+      </ul>
+
+	</ul>
+
+	</div>
+
+</header>
+
+<!-- -->
+{% block body%}
+
+{% endblock %}
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>

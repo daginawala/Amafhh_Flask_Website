@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Python Programming Tutorials</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link  rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</head>
+
+
+<style>
+
+    body { padding-top: 70px; }
+    div.gallery {
+        margin: 50px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+}
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">
+				  <img style="max-width:60px; margin-top: -15px;" src="{{ url_for('static', filename='images/amafhh_logo.jpg') }}">
+				</a>
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="/stats/">Team Record</a>
+    		</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/batting/">Batting Record<span class="sr-only"></span></a></li>
+          <li><a href="/bowling/">Bowling Record<span class="sr-only"></span></a></li>
+        <li><a href="/createMatch/">Create New Match</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    {%block dash%}
+
+    {% endblock %}
+
+    <!-- Vendor libraries -->
+
+
+</body>
+</html>

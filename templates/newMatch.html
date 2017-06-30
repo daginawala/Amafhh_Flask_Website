@@ -1,0 +1,500 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<form method="POST" action="/newMatch/">
+
+    <p>Opposition <input type = "text" name = "Opposition" /></p>
+    <p> Format <select name="Format">
+        <option value="45 Overs">45 Overs</option>
+        <option value="35 Overs">35 Overs</option>
+        <option value="40 Overs">40 Overs</option>
+        <option value="20 Overs">20 Overs</option>
+    </select>
+    </p>
+
+    <p> Amafhh Score <input type = "number" name = "HomeTotal" /> </p>
+    <p> Opposition Score <input type = "number" name = "AwayTotal" /> </p>
+
+    <p> Tournaments <select name="Tournaments">
+        <option value="Burhani">Burhani</option>
+        <option value="Maskati">Maskati</option>
+        <option value="Bohras">Bohras</option>
+    </select>
+    </p>
+
+    <p>Result <select name="Result">
+        <option value="Won">Won</option>
+        <option value="Loss">Lost</option>
+        <option value="Tied">Tied</option>
+    </select>
+    </p>
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Player Name</th>
+        <th>Runs</th>
+        <th>Balls Faced</th>
+        <th>Wickets</th>
+        <th>Overs</th>
+        <th>Maidens</th>
+        <th>Runs Conceded</th>
+          <th>Wides</th>
+        <th>NoBalls</th>
+        <th>Dismissal</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0" /> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+    <tr>
+    <td>
+        <select name="playerName">
+            <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+        </select>
+    </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+
+    </tr>
+
+
+
+    <tr>
+        <td>
+            <select name="playerName">
+                <option value="" selected disabled>Select Player</option>
+            <option value="Muffadal Daginawala">Muffadal Daginawala</option>
+            <option value="Taha Chataiwala">Taha Chataiwala</option>
+            <option value="Adnan Kagalwala">Adnan Kagalwala</option>
+            <option value="Mukarram Rangwala">Mukarram Rangwala</option>
+            <option value="Hussain Haveliwala">Hussain Haveliwala</option>
+            <option value="Abdul Khilawala">Abdul Khilawala</option>
+            <option value="Ebrahim Kapadia">Ebrahim Kapadia</option>
+            <option value="Hatim Manasawala">Hatim Manasawala</option>
+            <option value="Taher Manasawala">Taher Manasawala</option>
+            <option value="Mustafa Amakin">Mustafa Amakin</option>
+            <option value="Abizer Sabuwala">Abizer Sabuwala</option>
+            </select>
+        </td>
+        <td> <input type = "number" name = "Runs" value="0"/> </td>
+        <td> <input type = "number" name = "BallsFaced" value="0"/> </td>
+        <td> <input type = "number" name = "Wickets" value="0"/> </td>
+        <td> <input type = "number" name = "Overs" value="0"/> </td>
+        <td> <input type = "number" name = "Maidens" value="0"/> </td>
+        <td> <input type = "number" name = "RunsConceded" value="0"/> </td>
+        <td> <input type = "number" name = "Wides" value="0"/> </td>
+        <td> <input type = "number" name = "NoBalls" value="0"/> </td>
+        <td>
+            <select name="dismissal">
+                <option value="Bowled">Bowled</option>
+                <option value="Run Out">Run Out</option>
+                <option value="Caught">Caught</option>
+                <option value="LBW">LBW</option>
+                <option value="HitWicket">HitWicket</option>
+                <option value="Retired">Retired</option>
+                <option value="Not Out">Not Out</option>
+                <option selected value="DNB">DNB</option>
+            </select>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+    <button class="btn btn-primary" type="submit" name="submit" value="{{match_id}}"> Submit </button>
+    <button class="btn btn-primary" type="submit" name="Cancel" value="{{match_id}}"> Cancel </button>
+
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+{% block dash %}
+
+    <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="stats">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Played</th>
+                  <th>Won</th>
+                  <th>Loss</th>
+                  <th>Win %</th>
+                </tr>
+
+              <tr>
+                  <td> {{total_played}} </td>
+                  <td> {{win_count}} </td>
+                  <td> {{loss_count}} </td>
+                  <td> {{win_percentage}}% </td>
+              </tr>
+              </thead>
+            </table>
+          </div>
+
+
+    </div>
+
+{% endblock %}
